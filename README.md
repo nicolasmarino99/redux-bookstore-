@@ -1,8 +1,5 @@
 # React-Redux BookStore app
 The calculator counts with:
-- the 5 basic opertaions (+,-,/,*,%)
-- normal standart calculator functionalities
-
 
 ![screenshot](./src/imgs/calculator.jpg)
 
@@ -14,6 +11,10 @@ The calculator counts with:
 - EcmaScript 8
 - React
 - npm
+- React-DOM
+- React-Create-App
+- Redux
+- Node.js
 
 ## Getting Started
 
