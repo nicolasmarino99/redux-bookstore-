@@ -10,11 +10,7 @@ const Book = ({ book }) => (
 );
 
 Book.propTypes = {
-  // eslint-disable-next-line no-undef
-  id: propTypes.number,
-  // eslint-disable-next-line no-undef
-  title: propTypes.string,
-  category: PropTypes.string,
-}.isRequired;
+  book: PropTypes.instanceOf(Object).isRequired,
+};
 
 export default Book;
