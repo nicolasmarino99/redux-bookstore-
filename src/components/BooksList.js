@@ -23,7 +23,7 @@ const BookList = ({ books }) => (
     </tbody>
   </table>
 );
-const stateHook = state => ({
+const mapStateTpProps = state => ({
   books: state.books,
 });
 // eslint-disable-next-line react/no-typos
@@ -31,4 +31,4 @@ BookList.PropTypes = {
   books: PropTypes.instanceOf(Array).isRequired,
 };
 
-export default connect(stateHook, null)(BookList);
+export default connect(mapStateTpProps, null)(BookList);
