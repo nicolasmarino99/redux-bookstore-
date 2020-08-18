@@ -1,11 +1,34 @@
 import React from 'react';
-import Book from './Book'
+import { connect } from 'react-redux';
+import PropTypes, { Array } from 'prop-types';
+import Book from './Book';
 
-const BookList = ({book: {id, title, category}}) => {
-   return (
-   <div className='bookStats-table'>
-        <Book book={{id, title, category}}/>
-    </div>)
+// eslint-disable-next-line react/prop-types
+const BookList = ({ books }) => (
+  <table>
+    <thead>
+      <tr>
+        <th>Book ID</th>
+        <th>Title</th>
+        <th>Category</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+          // eslint-disable-next-line react/prop-types
+          books.map(book => (
+            <Book key={book.id} book={book} />
+          ))
+        }
+    </tbody>
+  </table>
+);
+const stateHook = state => ({
+  books: state.books,
+});
+// eslint-disable-next-line react/no-typos
+BookList.PropTypes = {
+  books: PropTypes.instanceOf(Array).isRequired,
 };
 
-export default BookList
+export default connect(stateHook, null)(BookList);
