@@ -5,6 +5,9 @@ const BookForm = ({ book }) => {
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('');
 
+  const handleTextChange = e => setTitle(e.target.value);
+  const handleOptionChange = e => setCategory(e.target.value);
+
   return (
     <form>
       <input type="text" value="" name="title" />
