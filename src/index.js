@@ -3,17 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+import { uuid } from 'uuidv4';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 import booksReducer from './reducers/index';
 
 const state = {
   books: [
-    { id: Math.floor(1000 * Math.random(5, 5)), title: 'Lolita', category: 'Romance' },
-    { id: Math.floor(1000 * Math.random(5, 5)), title: 'Lolita', category: 'Romance' },
-    { id: Math.floor(1000 * Math.random(5, 5)), title: 'Lolita', category: 'Romance' },
-    { id: Math.floor(1000 * Math.random(5, 5)), title: 'Lolita', category: 'Romance' },
-    { id: Math.floor(1000 * Math.random(5, 5)), title: 'Lolita', category: 'Romance' },
+    { id: uuid(), title: 'Lolita', category: 'Romance' },
+    { id: uuid(), title: 'Lolita', category: 'Romance' },
+    { id: uuid(), title: 'Lolita', category: 'Romance' },
+    { id: uuid(), title: 'Lolita', category: 'Romance' },
+    { id: uuid(), title: 'Lolita', category: 'Romance' },
   ],
 };
 

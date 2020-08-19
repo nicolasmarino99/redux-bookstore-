@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes, { Array } from 'prop-types';
-import Book from './Book';
+import Book from '../components/Book';
 
 // eslint-disable-next-line react/prop-types
 const BookList = ({ books }) => (
