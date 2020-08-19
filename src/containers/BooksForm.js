@@ -8,10 +8,14 @@ const BookForm = ({ book }) => {
   const handleTextChange = e => setTitle(e.target.value);
   const handleOptionChange = e => setCategory(e.target.value);
 
+  const handleSubmit = e => {
+    e.preventDefault();
+  };
+
   return (
-    <form>
-      <input type="text" value="" name="title" />
-      <select value="" name="category">
+    <form onSubmit={handleSubmit}>
+      <input type="text" value="" name="title" onChange={handleTextChange} />
+      <select value="" name="category" required onChange={handleOptionChange}>
         { categories.map(category => <option key={category} value={category}>{category}</option>) }
       </select>
       <button type="submit">Submit</button>
