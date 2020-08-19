@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import categories from '../variables/Categories';
-import createBook from '../actions/books';
+import { createBook } from '../actions/books';
 
 const mapDispatchProps = dispatch => ({
-  addBook: book => {
+  newBook: book => {
     dispatch(createBook(book));
   },
 });
