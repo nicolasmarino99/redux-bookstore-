@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { uuid } from 'uuidv4';
 import categories from '../variables/Categories';
 import { createBook } from '../actions/books';
 
@@ -19,7 +20,8 @@ const BookForm = ({ newBook }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    const book = { title, category };
+    e.target.elements.category.value = '';
+    const book = { id: uuid(), title, category };
     newBook(book);
     setTitle('');
     setCategory('');
@@ -27,8 +29,8 @@ const BookForm = ({ newBook }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" value="" name="title" placeholder="Please add a new book" onChange={handleTextChange} />
-      <select value="" name="category" required onChange={handleOptionChange}>
+      <input type="text" name="title" placeholder="Please add a new book" onChange={handleTextChange} />
+      <select name="category" required onChange={handleOptionChange}>
         { categories.map(category => <option key={category} value={category}>{category}</option>) }
       </select>
       <button type="submit">Submit</button>
