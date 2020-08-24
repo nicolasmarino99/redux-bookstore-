@@ -1,13 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import { uuid } from 'uuidv4';
+import App from './components/App';
 import * as serviceWorker from './serviceWorker';
+import booksReducer from './reducers/index';
+
+const state = {
+  books: [
+    { id: uuid(), title: 'Lolita', category: 'Romance' },
+    { id: uuid(), title: 'Lolita', category: 'Romance' },
+    { id: uuid(), title: 'Lolita', category: 'Romance' },
+    { id: uuid(), title: 'Lolita', category: 'Romance' },
+    { id: uuid(), title: 'Lolita', category: 'Romance' },
+  ],
+};
+
+const store = createStore(booksReducer, state);
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root'),
 );
 
