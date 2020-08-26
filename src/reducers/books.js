@@ -6,8 +6,8 @@ const booksReducer = (() => {
     const books = window.localStorage.getItem('books');
     if (!books) {
       return {
-        0: { id: uuid(), title: 'Lolita', category: 'Romance', filter: 'All' },
-        1: { id: uuid(), title: 'Lolita', category: 'Romance', filter: 'All' },
+        0: { id: uuid(), title: 'Lolita', category: 'Action' },
+        1: { id: uuid(), title: 'Lolita', category: 'Action' },
       };
     }
     return JSON.parse(books);

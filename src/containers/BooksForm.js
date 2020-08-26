@@ -25,7 +25,6 @@ const BookForm = ({ newBook }) => {
       id: uuid(),
       title,
       category,
-      filter: 'All',
     };
     newBook(book);
     setTitle('');
