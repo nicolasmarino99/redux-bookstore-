@@ -1,3 +1,4 @@
+/* eslint-disable object-curly-newline */
 import { uuid } from 'uuidv4';
 
 const booksReducer = (() => {
@@ -5,8 +6,8 @@ const booksReducer = (() => {
     const books = window.localStorage.getItem('books');
     if (!books) {
       return {
-        0: { id: uuid(), title: 'Lolita', category: 'Romance' },
-        1: { id: uuid(), title: 'Lolita', category: 'Romance' },
+        0: { id: uuid(), title: 'Lolita', category: 'Romance', filter: 'All' },
+        1: { id: uuid(), title: 'Lolita', category: 'Romance', filter: 'All' },
       };
     }
     return JSON.parse(books);

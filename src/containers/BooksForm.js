@@ -21,7 +21,12 @@ const BookForm = ({ newBook }) => {
   const handleSubmit = e => {
     e.preventDefault();
     e.target.elements.category.value = '';
-    const book = { id: uuid(), title, category };
+    const book = {
+      id: uuid(),
+      title,
+      category,
+      filter: 'All',
+    };
     newBook(book);
     setTitle('');
     setCategory('');
