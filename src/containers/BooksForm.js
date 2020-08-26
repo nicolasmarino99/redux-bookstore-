@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { uuid } from 'uuidv4';
 import categories from '../variables/Categories';
-import { createBook } from '../actions/books';
+import { createBook } from '../actions';
 
 const mapDispatchProps = dispatch => ({
   newBook: book => {

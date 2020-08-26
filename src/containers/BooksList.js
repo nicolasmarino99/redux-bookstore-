@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
-import { removeBook } from '../actions/books';
+import { removeBook } from '../actions';
 
 const BookList = ({ books, removeBook }) => {
   const booksListArray = Object.values(books);
