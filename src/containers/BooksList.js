@@ -1,34 +1,40 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { connect } from 'react-redux';
-import PropTypes, { Array } from 'prop-types';
+import PropTypes from 'prop-types';
 import Book from '../components/Book';
+import { removeBook } from '../actions/books';
 
-// eslint-disable-next-line react/prop-types
-const BookList = ({ books }) => (
-  <table>
-    <thead>
-      <tr>
-        <th>Book ID</th>
-        <th>Title</th>
-        <th>Category</th>
-      </tr>
-    </thead>
-    <tbody>
-      {
-          // eslint-disable-next-line react/prop-types
-          books.map(book => (
-            <Book key={book.id} book={book} />
-          ))
-        }
-    </tbody>
-  </table>
-);
-const mapStateTpProps = state => ({
-  books: state.books,
-});
-// eslint-disable-next-line react/no-typos
-BookList.PropTypes = {
-  books: PropTypes.instanceOf(Array).isRequired,
+const BookList = ({ books, removeBook }) => {
+  const booksListArray = Object.values(books);
+
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th>Book ID</th>
+          <th>Title</th>
+          <th>Category</th>
+          <th>options</th>
+        </tr>
+      </thead>
+      <tbody>
+        { booksListArray.map(book => <Book key={book.id} book={book} removeBook={removeBook} />) }
+      </tbody>
+    </table>
+  );
 };
 
-export default connect(mapStateTpProps, null)(BookList);
+const mapDispatchToProps = dispatch => ({ removeBook: book => dispatch(removeBook(book)) });
+
+const mapStateToProps = state => ({
+  books: state.books,
+});
+
+BookList.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  books: PropTypes.array.isRequired,
+  removeBook: PropTypes.func.isRequired,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(BookList);

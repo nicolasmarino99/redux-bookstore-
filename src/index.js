@@ -3,27 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import { uuid } from 'uuidv4';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
-import booksReducer from './reducers/index';
+import reducer from './reducers/index';
 
-const state = {
-  books: [
-    { id: uuid(), title: 'Lolita', category: 'Romance' },
-    { id: uuid(), title: 'Lolita', category: 'Romance' },
-    { id: uuid(), title: 'Lolita', category: 'Romance' },
-    { id: uuid(), title: 'Lolita', category: 'Romance' },
-    { id: uuid(), title: 'Lolita', category: 'Romance' },
-  ],
-};
+const store = createStore(reducer);
 
-const store = createStore(booksReducer, state);
+store.subscribe(() => {
+  window.localStorage.setItem('books', JSON.stringify(store.getState().books));
+});
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>,
   document.getElementById('root'),
 );
 

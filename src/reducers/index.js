@@ -1,12 +1,8 @@
-const booksReducer = (state = [], actions) => {
-  switch (actions.type) {
-    case 'CREATE_BOOK':
-      return [...state, actions.book];
-    case 'REMOVE_BOOK':
-      return state.filter(book => book.id !== actions.book.id);
-    default:
-      return state;
-  }
-};
+import { combineReducers } from 'redux';
+import booksReducer from './books';
 
-export default booksReducer;
+const reducer = combineReducers({
+  books: booksReducer,
+});
+
+export default reducer;
