@@ -16,7 +16,18 @@ const BookList = ({ books, removeBook, changeFilter, filter }) => {
   };
   return (
     <>
-      <CategoryFilter handleOptionChange={handleFilter} />
+      <nav>
+        <div>
+          <div id="Bookstore-CMS">Bookstore-CMS</div>
+          <div>BOOKS</div>
+          <div><CategoryFilter handleOptionChange={handleFilter} /></div>
+        </div>
+        <div id="Oval">
+          <div id="profile-img" />
+        </div>
+
+      </nav>
+      
       { filterArray().map(book => <Book key={book.id} book={book} removeBook={removeBook} />) }
     </>
   );
