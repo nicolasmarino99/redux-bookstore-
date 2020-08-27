@@ -27,7 +27,7 @@ const BookList = ({ books, removeBook, changeFilter, filter }) => {
         </div>
 
       </nav>
-      
+
       { filterArray().map(book => <Book key={book.id} book={book} removeBook={removeBook} />) }
     </>
   );
