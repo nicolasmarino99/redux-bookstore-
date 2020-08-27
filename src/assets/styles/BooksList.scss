@@ -1,3 +1,101 @@
-tr {
-  color: white;
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em 4em;
+  border-bottom: solid 3px #e8e8e8;
+  background: white;
+  #filter {
+    display: flex;
+    align-items: center;
+    div {
+      margin: 0 8px;
+    }
+    #Bookstore-CMS {
+      color: #0290ff;
+      font-size: 30px;
+      font-weight: bold;
+      
+    }
+    #BOOKS {
+      font-size: 13px;
+      
+      letter-spacing: 1.9px;
+    }
+    #FILTER {
+      opacity: 0.5;
+      font-size: 13px;
+     
+      letter-spacing: 1.9px;
+      #category-filter {
+        background-color: transparent;
+        border: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+      }
+    }
+  }
+  #Oval {
+    width: 45px;
+    height: 45px;
+    border: solid 1px #e8e8e8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2%;
+    #profile-img {
+      width: 17px;
+      height: 17px;
+      fill: #0290ff;
+    }
+  }
 }
+
+#books-container {
+  height: 77%;
+  #books {
+    padding: 4em;
+    overflow-y: scroll;
+    height: 81%;
+    .Book {
+      background: white;
+      padding: 2em;
+      margin-bottom: 2em;
+      .category {
+        color: #b7b2b2;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 0.5em;
+      }
+      .title {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .author {
+        color: #4386bf;
+        font-size: 15px;
+        margin-bottom: 1.5em;
+      }
+      .options {
+        button {
+          border: none;
+          background: none;
+          padding-right: 0.5em;
+          border-right: 1px solid #979797;
+          color: #4386bf; 
+          &:not(:first-child) {
+            padding-left: 0.5em; 
+          }
+          &:last-child {
+            border: none; 
+          }  
+        }  
+      }
+    }
+  }
+}
+

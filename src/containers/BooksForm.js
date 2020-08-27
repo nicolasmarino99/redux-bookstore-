@@ -35,10 +35,11 @@ const BookForm = ({ newBook }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" name="title" placeholder="Book title" onChange={handleTextChange} />
-      <input type="text" name="title" placeholder="Book author" onChange={handleAuthorTextChange} />
+    <form id="BooksForm" onSubmit={handleSubmit}>
+      <input type="text" name="title" placeholder="Book title" required onChange={handleTextChange} />
+      <input type="text" name="title" placeholder="Book author" required onChange={handleAuthorTextChange} />
       <select name="category" required onChange={handleOptionChange}>
+      <option value="Categories" selected disabled hidden>Categories</option>
         { categories.map(category => <option key={category} value={category}>{category}</option>) }
       </select>
       <button type="submit">Submit</button>
