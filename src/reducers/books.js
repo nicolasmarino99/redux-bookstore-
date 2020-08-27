@@ -1,4 +1,3 @@
-/* eslint-disable object-curly-newline */
 import { uuid } from 'uuidv4';
 
 const booksReducer = (() => {
