@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { uuid } from 'uuidv4';
 import categories from '../variables/Categories';
-import { createBook } from '../actions/books';
+import { createBook } from '../actions';
 
 const mapDispatchProps = dispatch => ({
   newBook: book => {
@@ -21,7 +21,11 @@ const BookForm = ({ newBook }) => {
   const handleSubmit = e => {
     e.preventDefault();
     e.target.elements.category.value = '';
-    const book = { id: uuid(), title, category };
+    const book = {
+      id: uuid(),
+      title,
+      category,
+    };
     newBook(book);
     setTitle('');
     setCategory('');
