@@ -35,16 +35,17 @@
       align-items: center;
       justify-content: center;
       font-weight: bold;
+
       @keyframes colorout {
         from { background: #0290ff; }
-        to  { background: #0465af; }
-        }
-        &:hover {
-            cursor: pointer;
-            animation: .5s colorout;
-            background: #0465af;
-        }
+        to { background: #0465af; }
+      }
+
+      &:hover {
+        cursor: pointer;
+        animation: 0.5s colorout;
+        background: #0465af;
+      }
     }
   }
 }
-
