@@ -1,7 +1,7 @@
 # React-Redux BookStore app
 The calculator counts with:
 
-![screenshot](./src/imgs/calculator.jpg)
+![screenshot](./src/assets/imgs/Reactapp.jpg)
 
 [Live version](https://react-calculator99.herokuapp.com)
 ## Built With

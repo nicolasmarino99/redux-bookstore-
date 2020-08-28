@@ -17,12 +17,11 @@ const Book = ({ book, removeBook }) => (
         </div>
       </div>
 
-      
     </div>
     <div className="progess-section">
-        <ProgressCircle numbers={[book.currentPage, book.totalPages]} strokeWidth={8} />
-        <CurrentProgress currentNum={book.currentPage} />
-      </div>
+      <ProgressCircle numbers={[book.currentPage, book.totalPages]} strokeWidth={8} />
+      <CurrentProgress currentNum={book.currentPage} />
+    </div>
 
   </div>
 );

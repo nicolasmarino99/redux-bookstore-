@@ -15,6 +15,7 @@ const ProgressCircle = ({ numbers, strokeWidth }) => {
     stroke: '#007dbc',
     strokeLinecap: 'round',
     strokeDasharray: `${diameter}px ${diameter}px`,
+    // eslint-disable-next-line no-mixed-operators
     strokeDashoffset: `${((100 - percentage) / 100 * diameter)}px`,
   };
 
@@ -55,6 +56,7 @@ const ProgressCircle = ({ numbers, strokeWidth }) => {
 };
 
 ProgressCircle.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
   numbers: PropTypes.array.isRequired,
   strokeWidth: PropTypes.number.isRequired,
 };
