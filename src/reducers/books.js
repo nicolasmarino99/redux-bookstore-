@@ -6,13 +6,13 @@ const booksReducer = (() => {
     if (!books) {
       return {
         0: {
-          id: uuid(), title: 'The Hunger Games', category: 'Action', author: 'Suzanne Collins',
+          id: uuid(), title: 'The Hunger Games', category: 'Action', author: 'Suzanne Collins', totalPages: 100, currentPage: 50,
         },
         1: {
-          id: uuid(), title: 'Dune', category: 'Science Fiction', author: 'Frank Herbert',
+          id: uuid(), title: 'Dune', category: 'Science Fiction', author: 'Frank Herbert', totalPages: 120, currentPage: 40,
         },
         2: {
-          id: uuid(), title: 'Capital in the Twenty-First Century', category: 'Economy', author: 'Suzanne Collins',
+          id: uuid(), title: 'Capital in the Twenty-First Century', category: 'Economy', author: 'Suzanne Collins', totalPages: 200, currentPage: 50,
         },
       };
     }
