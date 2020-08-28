@@ -1,7 +1,6 @@
 @import './BooksList.scss';
 @import './BooksForm.scss';
 
-
 * {
   margin: 0;
   padding: 0;
@@ -23,12 +22,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
   .App {
     background: #f5f6fa;
     width: 87%;
-    -webkit-box-shadow: 10px 10px 49px 0px rgba(0,0,0,0.43);
-    -moz-box-shadow: 10px 10px 49px 0px rgba(0,0,0,0.43);
-    box-shadow: 10px 10px 49px 0px rgba(0,0,0,0.43);
+    -webkit-box-shadow: 10px 10px 49px 0 rgba(0, 0, 0, 0.43);
+    -moz-box-shadow: 10px 10px 49px 0 rgba(0, 0, 0, 0.43);
+    box-shadow: 10px 10px 49px 0 rgba(0, 0, 0, 0.43);
     height: 96%;
   }
 }

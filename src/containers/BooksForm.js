@@ -44,7 +44,7 @@ const BookForm = ({ newBook }) => {
           <option value="Categories" selected disabled hidden>Categories</option>
           { categories.map(category => <option key={category} value={category}>{category}</option>) }
         </select>
-        <button type="submit">ADD BOOK</button>
+        <button id="submit" type="submit">ADD BOOK</button>
       </form>
     </div>  
   );
