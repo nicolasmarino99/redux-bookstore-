@@ -41,7 +41,7 @@ const BookForm = ({ newBook }) => {
         <input type="text" name="title" placeholder="Book title" required onChange={handleTextChange} />
         <input type="text" name="title" placeholder="Book author" required onChange={handleAuthorTextChange} />
         <select name="category" required onChange={handleOptionChange}>
-        <option value="Categories" selected disabled hidden>Categories</option>
+          <option value="Categories" selected disabled hidden>Categories</option>
           { categories.map(category => <option key={category} value={category}>{category}</option>) }
         </select>
         <button type="submit">ADD BOOK</button>
