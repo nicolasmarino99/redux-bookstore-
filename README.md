@@ -1,9 +1,14 @@
 # React-Redux BookStore app
-The calculator counts with:
+The App counts with:
+- Books management system
+- Deletion of books
+- Addition of books 
+- progress tracking
+- filter based on categories
 
 ![screenshot](./src/assets/imgs/Reactapp.jpg)
 
-[Live version](https://react-calculator99.herokuapp.com)
+[Live version](https://redux-bookstore99.herokuapp.com/)
 ## Built With
 
 - HTML5 
