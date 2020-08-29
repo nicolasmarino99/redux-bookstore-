@@ -1,7 +1,7 @@
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 2em 4em;
+  padding: 2em 7em;
   border-bottom: solid 2px #e8e8e8;
   background: white;
 
@@ -24,20 +24,18 @@ nav {
       letter-spacing: 1.9px;
     }
 
-    #FILTER {
+    select {
       opacity: 0.5;
       font-size: 13px;
       letter-spacing: 1.9px;
-
-      #category-filter {
-        background-color: transparent;
-        border: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        -ms-appearance: none;
-        -o-appearance: none;
-        appearance: none;
-      }
+      padding-bottom: 4px;
+      background-color: transparent;
+      border: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-appearance: none;
+      -o-appearance: none;
+      appearance: none;
     }
   }
 

@@ -8,7 +8,6 @@
     overflow-y: scroll;
     height: 100%;
     width: 88%;
-    border-bottom: 2px solid #d4d4d4;
 
     &::-webkit-scrollbar {
       width: 0.7em;
@@ -123,7 +122,7 @@
 
       button {
         background: #0290ff;
-        color: wheat;
+        color: white;
         padding: 0.6em 2em;
         border: none;
         border-radius: 3px;
