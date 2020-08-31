@@ -1,0 +1,144 @@
+#books-container {
+  height: 61%;
+  display: flex;
+  justify-content: center;
+
+  #books {
+    padding: 1em;
+    overflow-y: scroll;
+    height: 100%;
+    width: 88%;
+
+    &::-webkit-scrollbar {
+      width: 0.7em;
+    }
+
+    &::-webkit-scrollbar-track {
+      visibility: hidden;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(169, 169, 169, 0.432);
+      outline: 1px solid rgba(112, 128, 144, 0.356);
+      border-radius: 10px;
+    }
+  }
+}
+
+.Book {
+  display: flex;
+  justify-content: space-between;
+  border: solid 1px #e8e8e8;
+  background: white;
+  padding: 0 2em;
+  margin-bottom: 2em;
+
+  .category {
+    color: #b7b2b2;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+
+  .title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .author {
+    color: #4386bf;
+    font-size: 15px;
+    margin-bottom: 1.5em;
+  }
+
+  .options {
+    button {
+      border: none;
+      background: none;
+      padding-right: 0.5em;
+      border-right: 1px solid #979797;
+      color: #4386bf;
+
+      &:not(:first-child) {
+        padding-left: 0.5em;
+      }
+
+      &:last-child {
+        border: none;
+      }
+
+      &:hover {
+        cursor: pointer;
+        color: #0290ff;
+      }
+    }
+  }
+
+  .info { padding: 2em; }
+
+  .progess-section {
+    display: flex;
+    align-items: center;
+
+    .ProgressCircle {
+      display: flex;
+      align-items: center;
+      padding: 1em 2em 0 0;
+      border-right: 2px solid #80808042;
+
+      .CircularProgressbar {
+        margin-right: 1em;
+      }
+
+      .percentage {
+        padding-bottom: 0.8em;
+
+        h2 {
+          font-size: 2em;
+          font-weight: unset;
+        }
+
+        p {
+          color: #989898;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .current-progress {
+      padding: 2em;
+
+      h3 {
+        font-weight: unset;
+        font-size: 14px;
+        margin-bottom: 0.5em;
+        color: #8080809e;
+      }
+
+      h4 {
+        font-weight: unset;
+      }
+
+      button {
+        background: #0290ff;
+        color: white;
+        padding: 0.6em 2em;
+        border: none;
+        border-radius: 3px;
+        margin-top: 1.5em;
+
+        @keyframes colorout {
+          from { background: #0290ff; }
+          to { background: #0465af; }
+        }
+
+        &:hover {
+          cursor: pointer;
+          animation: 0.5s colorout;
+          background: #0465af;
+        }
+      }
+    }
+  }
+}

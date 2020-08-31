@@ -1,0 +1,56 @@
+
+#BooksForm {
+  background: #f5f6fa;
+  padding: 0 7.2em;
+  display: flex;
+  width: 99.5%;
+  flex-direction: column;
+
+  h1 {
+    color: #9c9a9a;
+    font-size: 17px;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    padding-top: 1.5em;
+    border-top: 2px solid #80808040;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+
+    input,
+    select,
+    #submit {
+      height: 3em;
+      width: 18%;
+      font-size: 13px;
+      border-radius: 3px;
+      border: 1px solid gray;
+      padding: 0 1em;
+      margin-right: 1em;
+    }
+
+    #submit {
+      background: #0290ff;
+      border: none;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-right: 0;
+
+      @keyframes colorout {
+        from { background: #0290ff; }
+        to { background: #0465af; }
+      }
+
+      &:hover {
+        cursor: pointer;
+        animation: 0.5s colorout;
+        background: #0465af;
+      }
+    }
+  }
+}

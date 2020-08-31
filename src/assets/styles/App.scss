@@ -1,4 +1,6 @@
-@import './BooksList.scss';
+@import './BooksForm.scss';
+@import './Navbar.scss';
+@import './Book.scss';
 
 * {
   margin: 0;
@@ -17,8 +19,17 @@ body {
 
 #root {
   height: 100%;
-  background: rgb(2, 0, 36);
+  background: #f5f6fa;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  .App {
+    background: #f5f6fa;
+    width: 87%;
+    -webkit-box-shadow: 10px 10px 49px 0 rgba(0, 0, 0, 0.43);
+    -moz-box-shadow: 10px 10px 49px 0 rgba(0, 0, 0, 0.43);
+    box-shadow: 10px 10px 49px 0 rgba(0, 0, 0, 0.43);
+    height: 96%;
+  }
 }
